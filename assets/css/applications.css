@@ -1,0 +1,65 @@
+@font-face {
+    font-family: Hero;
+    src: url('../fonts/hero.ttf');
+}
+body{
+	font-family: Hero;
+}
+.container-fluid{
+	background-image: url('../images/bg-1-1600x900.jpg');
+	background-position: bottom center;
+	height: 100vh;
+	padding: 0px;
+}
+.container-fluid > div{
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.35);
+}
+#mainpage{
+	position:relative;
+	padding-top: 160px;
+	color: #FFFFFF;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#mainpage h1{
+	margin-bottom: 55px;
+	font-size: 41px;
+}
+#mainpage h2{
+	margin-bottom: 75px;	
+	font-size: 34px;
+}
+#mainpage .login-form button{
+	padding: 12px 35px;
+	border-radius: 5px;
+	border: 1px solid #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.25);
+	margin: 0 15px;
+	font-size: 20px;
+	transition: all 1s;
+}
+#mainpage .login-form button:hover{
+	background-color: rgba( 255,255, 255, 0.55);
+}
+/* Animation */
+#mainpage .login-form button:active{
+	outline: none;
+}
+#mainpage .login-form button:focus{
+	outline: none;
+}
+/* setting for modal */
+#sign_in_modal .close{
+	color: #007AFF;
+	opacity: 0.5;
+	font-size: 19px;
+}
+#sign_in_modal .close:focus{
+	outline: none;
+	font-weight: normal;
+}
+#sign_in_modal .modal-title{
+	font-size: 20px;
+}
