@@ -42,19 +42,56 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Modal Header</h4>
+					<h4 class="modal-title">Sign up</h4>
 				</div>
-				<div class="modal-body">
-					<p>Some text in the modal.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
+				<form id="sign_up_modal_form" method="post">
+					<div class="modal-body">
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email" required>
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Password" required>
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Confirm Password" required>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-success" >Sign up</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
 	<!-- SIGN IN MODAL -->
-	<div id="sign_in_modal" class="modal fade" role="dialog">
+	<div id="sign_in_modal" class="modal fade" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Sign in</h4>
+				</div>
+				<form id="sign_in_modal_form" method="post">
+					<div class="modal-body">
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email" required>
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Password" required>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-success" >Sign in</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- DEVICE MODAL -->
+	<div id="device_modal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
@@ -63,10 +100,55 @@
 					<h4 class="modal-title">Status of your Device</h4>
 				</div>
 				<div class="modal-body">
-					
+					<table id="device_list" class="table table-striped text-center">
+						<thead>
+							<tr>
+								<th class="text-center">Name</th>
+								<th class="text-center">Status</th>
+								<th class="text-center">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="line-device">
+								<td>Compact</td>
+								<td class="status_text" data-status="off">Off</td>
+								<td class="button-cg"><button type="button" class="btn btn-success" data-status="on">On</button></td>
+							</tr>
+							<tr class="line-device">
+								<td>Fan 1</td>
+								<td class="status_text" data-status="off">Off</td>
+								<td class="button-cg"><button type="button" class="btn btn-success" data-status="action-on">On</button></td>
+							</tr>
+							<tr class="line-device">
+								<td>Fan 2</td>
+								<td class="status_text" data-status="off">Off</td>
+								<td class="button-cg"><button type="button" class="btn btn-success" data-status="action-on">On</button></td>
+							</tr>
+							<tr class="line-device">
+								<td>Tivi</td>
+								<td class="status_text" data-status="off">Off</td>
+								<td class="button-cg"><button type="button" class="btn btn-success" data-status="action-on">On</button></td>
+							</tr>
+							<tr class="line-device">
+								<td>Air Conditioning</td>
+								<td class="status_text" data-status="off">Off</td>
+								<td class="button-cg"><button type="button" class="btn btn-success" data-status="action-on">On</button></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- WAITTING -->
+	<div class="pre-waitting"></div>
+	<!-- PRELOADER -->
+	<div class="pre-loader"></div>
+	<!-- SCRIPT PRELOADER -->
+	<script type="text/javascript">
+		$(window).load(function() {
+			$(".pre-loader").fadeOut(750);
+		});
+	</script>
 </body>
 </html>

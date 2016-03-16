@@ -51,15 +51,84 @@ body{
 	outline: none;
 }
 /* setting for modal */
-#sign_in_modal .close{
+.modal .close{
 	color: #007AFF;
 	opacity: 0.5;
 	font-size: 19px;
 }
-#sign_in_modal .close:focus{
+.modal .close:focus{
 	outline: none;
 	font-weight: normal;
 }
-#sign_in_modal .modal-title{
+.modal .modal-title{
 	font-size: 20px;
+}
+/* sign up */
+#sign_up_modal form .form-group{
+	padding: 5px 20px;
+}
+#sign_up_modal form .form-group .form-control{
+	font-size: 16px;
+	padding: 6px 16px;
+}
+#sign_up_modal form .modal-footer .btn{
+	padding: 7px 22px;
+	font-size: 15px;
+}
+#sign_up_modal form .modal-footer .btn:focus{
+	outline: none;
+}
+#device_modal #device_list{
+	font-size: 16px;
+}
+.modal-dialog{
+	margin-top: 80px !important ;
+}
+#device_list .btn{
+	padding: 6px 22px;
+}
+#device_list .btn:focus{
+	outline: none;
+}
+/* sign in */
+#sign_in_modal form .form-group{
+	padding: 5px 20px;
+}
+#sign_in_modal form .form-group .form-control{
+	font-size: 16px;
+	padding: 6px 16px;
+}
+#sign_in_modal form .modal-footer .btn{
+	padding: 7px 22px;
+	font-size: 15px;
+}
+#sign_in_modal form .modal-footer .btn:focus{
+	outline: none;
+}
+/* PRELOADER */
+.pre-loader{
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/pre-loader.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #fff;
+}
+/* PRE WAITTING */
+.pre-waitting{
+	display: none;
+	position: fixed;
+	z-index: 999999999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/waitting.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgba(0, 0, 0, 0.55);
 }
